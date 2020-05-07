@@ -7,16 +7,12 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.1
  *
  * @package         Fix158888
  */
 
 // Your code starts here.
 
-require 'plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/FIXONWEB/fix158888-add-ins',
-	__FILE__, 
-	'fix158888-add-ins/fix158888-add-ins'
-);
+require 'functions.php';
+
