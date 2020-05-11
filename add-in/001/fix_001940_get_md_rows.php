@@ -52,7 +52,7 @@ function fix_001940_get_md_rows($md, $fields, $col, $df=array(),$cnn=""){
   }
   // $start = 0;
   $start = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
-  $limit = isset($_REQUEST['limit']) ? $_REQUEST['limit'] : 10;
+  $limit = isset($_REQUEST['limit']) ? $_REQUEST['limit'] : 500;
   // $start = isset($df['start']) ? $df['start'] : 0;
 
   //if(isset($_REQUEST['start']) ? sanitize_text_field($_REQUEST['start']) : 0) $start = $_REQUEST['start'];

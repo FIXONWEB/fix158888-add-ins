@@ -851,7 +851,7 @@ function fix158716_paged($atts, $content = null){
 						}
 					}
 					if(!isset($_GET['limit'])){
-						$limit = 10;
+						$limit = 500;
 						?>
 						<input type="text" name="limit" value="<?php echo $limit ?>" style="width: 100%;border:0px solid silver;margin: 0px;padding: 2px;text-align: center;" >
 						<?php
