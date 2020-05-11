@@ -1,20 +1,20 @@
 <?php
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
-add_shortcode("fix158882_noticia_destaque", "fix158882_noticia_destaque");
-function fix158882_noticia_destaque($atts, $content = null){
+add_shortcode("fix158881_ultimas_noticias", "fix158881_ultimas_noticias");
+function fix158881_ultimas_noticias($atts, $content = null){
 
 	$post_type = 'post';
 	$args = array(
-		'numberposts' => 1,
+		'numberposts' => 4,
 		'post_type'   => $post_type,
-		// 'category'    => 'destaque',
     	'tax_query' => array(
         	array(
             	'taxonomy' => 'category',
             	'field'    => 'slug',
-            	'terms'    => 'destaque'
+            	'terms'    => 'noticias-principais'
         	)
     	)
+
 		// 'tax_query' => array(
   //       	array(
   //           	'taxonomy' => 'clientes',
@@ -30,31 +30,37 @@ function fix158882_noticia_destaque($atts, $content = null){
 	?>
 		<style type="text/css">
 			.border_red {
-				border: 0px solid red;	
+				border: 0px solid red;
+				font-size: 90%;	
 			}
-			.fix158882_1 {
-				background-size: cover;
+			.fix158881_1 {
+				display: grid;
+				grid-template-columns: 80px 1fr;
+				grid-column-gap: 10px;
+				grid-row-gap: 10px;
+				/*padding: 10px;*/
 			}
 
-			.fix158882_1 .fix-image {
-				border: 0px solid red;
-				min-height: 100px;	
+			.fix158881_1 .fix-image {
+				border: 1px solid silver;
+				height: 60px;
+				background-size: cover;
 			}
-			.fix158882_1 .fix-texto {
-				background: rgba(0, 0, 0, 0.7);
-				padding: 5px;
-				color: white;
+			.fix158881_1 .fix-texto {
+
 			}
-			.fix158882_1 .fix-texto .fix-data {
+			.fix158881_1 .fix-texto .fix-data {
+				color: #3a6b96;
 				line-height: 1;
-				font-size: 80%;
 			}
-			.fix158882_1 .fix-texto .fix-title {
+			.fix158881_1 .fix-texto .fix-title {
 				line-height: 1;
+				color: #3a6b96;
 				font-weight: bold;
 			}
-			.fix158882_1 .fix-texto .fix-content {
+			.fix158881_1 .fix-texto .fix-content {
 				line-height: 1;
+				color: #727874;
 				font-weight: gray;
 				padding-top: 4px;
 				font-weight: 500;
@@ -62,6 +68,7 @@ function fix158882_noticia_destaque($atts, $content = null){
 
 		</style>
 
+		<?php $i=0; ?>
 		<?php foreach ($posts as $post) { ?>
 
 			<?php 
@@ -70,13 +77,18 @@ function fix158882_noticia_destaque($atts, $content = null){
 			$content = $post->post_content;
 			$content = apply_filters('the_content', $content);
 			$content = str_replace(']]>', ']]&gt;', $content);
-			$content = wp_trim_words( $content, 5 );
+			$content = wp_trim_words( $content, 9 );
+			// $img_url = get_the_post_thumbnail_url($post->ID,'full'); 
 			$img_url = get_the_post_thumbnail_url($post->ID,'medium'); 
+			// $img_url = wp_get_attachment_url($post->ID, 'medium' );
+
+			// echo "img_url: $img_url";
 			?>
 
-			<div class="fix158882_1 border_red" style="background: url('<?php echo $img_url ?>');">
-				<a href="<?php echo $post->guid ?>">
-					<div class="fix-image border_red"  >
+			<?php if($i) echo '<div style="height:10px;"></div>'; ?>
+			<a href="<?php echo $post->guid ?>">
+				<div class="fix158881_1 border_red">
+					<div class="fix-image border_red" style="background-image: url('<?php echo $img_url ?>');" >
 						
 					</div>
 					<div class="fix-texto border_red">
@@ -84,8 +96,9 @@ function fix158882_noticia_destaque($atts, $content = null){
 						<div class="fix-title"><?=$post_title ?></div>
 						<div class="fix-content"><?=$content ?></div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+			<?php $i++; ?>
 		<?php } ?>
 	<?php
 	return ob_get_clean();
