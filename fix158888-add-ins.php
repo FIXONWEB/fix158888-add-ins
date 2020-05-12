@@ -7,11 +7,15 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.9
+ * Version:         1.0.10
  *
  * @package         Fix158888
  */
 
+
+/*
+1.0.10 - background-size: cover; na noticia destaque
+*/
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 require 'plugin-update-checker.php';
