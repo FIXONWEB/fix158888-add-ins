@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.6
+ * Version:         1.0.9
  *
  * @package         Fix158888
  */
@@ -28,7 +28,7 @@ function fix158888_enqueue_scripts(){
 
 
 function fix158888_banner_1_por_pagina( $query ) {
-    if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'cptbc' ) ) {
+    if ( ! is_admin() && $query->is_main_query() && (get_post_type()=='cptbc' ) ) {
         $query->set( 'posts_per_page', 1 );
         return;
     }
@@ -37,6 +37,7 @@ add_action( 'pre_get_posts', 'fix158888_banner_1_por_pagina', 1 );
 
 
 /*
+
 @media (min-width: 800px) {
 	.fix_col_h180 {
 		height:180px;
