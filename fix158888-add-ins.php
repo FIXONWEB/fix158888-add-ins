@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.13
+ * Version:         1.0.14
  *
  * @package         Fix158888
  */
@@ -31,6 +31,7 @@ function fix158888_plugin_file(){return plugin_dir_path( __FILE__ );}
 add_action('wp_enqueue_scripts', "fix158888_enqueue_scripts");
 function fix158888_enqueue_scripts(){
     wp_enqueue_script( 'jquery-validate-min', plugin_dir_url( __FILE__ ) . '/js/jquery.validate.min.js', array( 'jquery' )  );
+    wp_enqueue_style('fix158888_style', plugin_dir_url(__FILE__) . '/css/fix158888_style.css', array(), '0.1.0', 'all');
 }
 
 
