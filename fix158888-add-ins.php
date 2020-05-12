@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.15
+ * Version:         1.0.16
  *
  * @package         Fix158888
  */
@@ -20,6 +20,7 @@
 1.0.13 - background-size: cover; na noticia destaque
 1.0.14 - folha de estilo globa
 1.0.15 - folha de estilo globa
+1.0.16 - retirou o "últimas notícias" para um plugin em separado
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
