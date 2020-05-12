@@ -74,7 +74,7 @@ function fix158882_noticia_destaque($atts, $content = null){
 			$img_url = get_the_post_thumbnail_url($post->ID,'medium'); 
 			?>
 
-			<div class="fix158882_1 border_red" style="background: url('<?php echo $img_url ?>');background-size: cover;">
+			<div class="fix158882_1 border_red" style="background: url('<?php echo $img_url ?>');background-size: contain;">
 				<a href="<?php echo $post->guid ?>">
 					<div class="fix-image border_red"  >
 						
