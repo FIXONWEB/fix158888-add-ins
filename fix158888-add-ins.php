@@ -7,21 +7,22 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.17
+ * Version:         1.0.18
  *
  * @package         Fix158888
  */
 
 
 /*
-1.0.10 - background-size: cover; na noticia destaque
-1.0.11 - background-size: contain; na noticia destaque
-1.0.12 - background-repeat: no-repeat na noticia destaque
-1.0.13 - background-size: cover; na noticia destaque
-1.0.14 - folha de estilo globa
-1.0.15 - folha de estilo globa
-1.0.16 - retirou o ultimas noticias para um plugin em separado
-1.0.17 - retirou o ultimas noticias para um plugin em separado
+1.0.10 - background-size: cover; na noticia destaque.
+1.0.11 - background-size: contain; na noticia destaque.
+1.0.12 - background-repeat: no-repeat na noticia destaque.
+1.0.13 - background-size: cover; na noticia destaque.
+1.0.14 - folha de estilo globa.
+1.0.15 - folha de estilo globa.
+1.0.16 - retirou o ultimas noticias para um plugin em separado.
+1.0.17 - retirou o ultimas noticias para um plugin em separado.
+1.0.18 - retirou o noticias destaque para um plugin em separado.
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
