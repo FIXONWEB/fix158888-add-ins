@@ -1,4 +1,9 @@
 @media (min-width: 800px) {
+	.fix_col_h050 {height:50px;overflow: hidden;}
+	.fix_col_h060 {height:60px;overflow: hidden;}
+	.fix_col_h070 {height:70px;overflow: hidden;}
+	.fix_col_h080 {height:80px;overflow: hidden;}
+	.fix_col_h090 {height:90px;overflow: hidden;}
 	.fix_col_h100 {height:100px;overflow: hidden;}
 	.fix_col_h120 {height:120px;overflow: hidden;}
 	.fix_col_h140 {height:140px;overflow: hidden;}
@@ -38,4 +43,14 @@
 	.fix_col_h480 {height:480px;overflow: hidden;}
 	.fix_col_h490 {height:490px;overflow: hidden;}
 	.fix_col_h500 {height:500px;overflow: hidden;}
+	.fix_col_h510 {height:510px;overflow: hidden;}
+	.fix_col_h520 {height:520px;overflow: hidden;}
+	.fix_col_h530 {height:530px;overflow: hidden;}
+	.fix_col_h540 {height:540px;overflow: hidden;}
+	.fix_col_h550 {height:550px;overflow: hidden;}
+	.fix_col_h560 {height:560px;overflow: hidden;}
+	.fix_col_h570 {height:570px;overflow: hidden;}
+	.fix_col_h580 {height:580px;overflow: hidden;}
+	.fix_col_h590 {height:590px;overflow: hidden;}
+	.fix_col_h600 {height:600px;overflow: hidden;}
 }

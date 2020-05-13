@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/fixonweb
  * Text Domain:     fix158888
  * Domain Path:     /languages
- * Version:         1.0.18
+ * Version:         1.0.19
  *
  * @package         Fix158888
  */
@@ -23,6 +23,7 @@
 1.0.16 - retirou o ultimas noticias para um plugin em separado.
 1.0.17 - retirou o ultimas noticias para um plugin em separado.
 1.0.18 - retirou o noticias destaque para um plugin em separado.
+1.0.19 - upgrade do style global.
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
